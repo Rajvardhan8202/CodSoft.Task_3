@@ -6,11 +6,10 @@ import java.util.Scanner;
 public class ATM {
 
     private final BankAccount account;
-    private final Scanner scanner;
+    private final Scanner scanner = new Scanner(System.in);
 
     public ATM(BankAccount account) {
         this.account = account;
-        this.scanner = new Scanner(System.in);
     }
 
     public void start() {
@@ -35,12 +34,11 @@ public class ATM {
     }
 
     private void showMenu() {
-        System.out.println("\n========== ATM MENU ==========");
+        System.out.println("\n====== ATM MENU ======");
         System.out.println("1. Check Balance");
         System.out.println("2. Deposit Money");
         System.out.println("3. Withdraw Money");
         System.out.println("4. Exit");
-        System.out.println("==============================");
     }
 
     private void checkBalance() {
@@ -55,7 +53,7 @@ public class ATM {
             account.deposit(amount);
             System.out.println("Deposit successful.");
         } catch (IllegalArgumentException e) {
-            System.out.println("Transaction failed: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 
@@ -67,7 +65,7 @@ public class ATM {
             account.withdraw(amount);
             System.out.println("Withdrawal successful.");
         } catch (IllegalArgumentException e) {
-            System.out.println("Transaction failed: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 

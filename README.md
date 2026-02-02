@@ -73,7 +73,8 @@ Git & GitHub
 
 👤 Author
 
-Rajvardhan
+Rajvardhan Sawant
+
 Java Intern at CODSOFT
 
 🔗 GitHub: Rajvardhan8202
